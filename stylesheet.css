@@ -1,52 +1,55 @@
 html {
     overflow-x: hidden;
-	 box-sizing: border-box;
-	 display: block;
-
+    box-sizing: border-box;
+    display: block;
+    scroll-behavior: smooth;
+    height: 100%;
 }
+
 html, body {
-    font-family: Verdana,sans-serif;
     font-size: 15px;
     line-height: 1.5;
-    background-image: url("src/bg.png"); 
-	background-repeat: round;
-	/* background-image: url("src/bg.png"); 
-	background-repeat: repeat-y;
-	background-repeat: repeat-x; */
+    background: url("src/bg.png") round; 
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
+
 body {
     display: block;
-    margin: 8px;
-	margin: 0;
-    font-family: "Kurale";
+    font-family: "Roboto";
+    margin: 0;
+    height: 100%;
 }
-/* footer {
-	 background-image: url("src/bg.png"); 
-	background-repeat: repeat-y;
-	background-repeat: repeat-x;
-} */
-.top {
-    top: 0;
-}
+
 .top, .bottom {
     position: fixed;
     width: 100%;
     z-index: 1;
 }
+
+.top {
+    top: 0;
+}
+
 .light-grey, .hover-light-grey:hover, .light-gray, .hover-light-gray:hover {
     color: #000;
     background-color: #f1f1f1;
 }
+
 .large {
     font-size: 18px;
 }
+
 .col.s3 {
     width: 25%;
 }
+
 .col, .third {
     float: left;
     width: 100%;
 }
+
 .block {
     display: block;
     width: 100%;
@@ -67,15 +70,29 @@ body {
 }
 
 .panel {
-    margin-top: 16px;
-    margin-bottom: 16px;
+    font-size: 14px;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+    background: rgba(108, 122, 137, 0.7) url("src/11.jpg") center bottom;
 }
 
-.panel p{
-	font-size:20px;
-}
 .container, .panel {
     padding: 0.01em 16px;
+}
+
+.container {
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.m6 img {
+    box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
+    border: 12px solid #eee;
 }
 
 .container_about {
@@ -88,31 +105,38 @@ body {
 }
 
 img {
-    border-style: none;
-	vertical-align: middle
+	vertical-align: middle;
 }
+
 .padding-64 {
     padding-top: 64px;
-    padding-bottom: 64px;
+    padding-bottom: 16px;
 }
+
 .padding-32 {
     padding-top: 32px;
     padding-bottom: 32px;
 }
+
 .padding-16 {
     padding-top: 16px;
     padding-bottom: 16px;
 }
+
 .padding-large {
     padding: 12px 24px;
 }
 
 .center {
     text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 	/* background-image: url("src/bg.png"); 
 	background-repeat: repeat-y;
 	background-repeat: repeat-x; */
 }
+
 .border-dark-grey, .hover-border-dark-grey:hover, .border-dark-gray, .hover-border-dark-gray:hover {
     border-color: #ff9800;
 }
@@ -120,6 +144,7 @@ img {
 .bottombar {
     border-bottom: 6px solid #ccc;
 }
+
 .xlarge {
     font-size: 35px;
 }
@@ -131,7 +156,6 @@ a {
 
 .row-padding, .row-padding>.half, .row-padding>.third, .row-padding>.twothird, .row-padding>.threequarter, .row-padding>.quarter, .row-padding>.col {
     padding: 0 8px;
-
 }
 
 .margin-bottom {
@@ -150,10 +174,13 @@ h3 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Kurale";
-    font-weight: 400;
-    margin: 10px 0;
+    font-family: "Roboto";
+    font-weight: 800;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin: 0;
 }
+
 h1 {
     font-size: 36px;
 }
@@ -161,6 +188,7 @@ h1 {
 b, strong {
     font-weight: bolder;
 }
+
 p {
     display: block;
     margin-block-start: 1em;
@@ -172,20 +200,25 @@ p {
 .opacity, .hover-opacity:hover {
     opacity: 0.60;
 }
+
 form {
     display: block;
     margin-top: 0em;
 }
+
 .section, .code {
     margin-top: 16px;
     margin-bottom: 16px;
 }
+
 label {
     cursor: default;
 }
+
 .border {
     border: 1px solid #ccc;
 }
+
 .input {
     padding: 8px;
     display: block;
@@ -193,16 +226,17 @@ label {
     border-bottom: 1px solid #ccc;
     width: 100%;
 }
+
 button, input {
     overflow: visible;
 }
+
 button, input, select, textarea, optgroup {
     font: inherit;
     margin: 0;
 }
 
 input {
-
     color: -internal-light-dark-color(black, white);
     letter-spacing: normal;
     word-spacing: normal;
@@ -216,7 +250,7 @@ input {
     -webkit-rtl-ordering: logical;
     cursor: text;
     margin: 0em;
-    font: 400 13.3333px Kurale;
+    font: 400 13.3333px Roboto;
     padding: 1px 2px;
     border-width: 2px;
     border-style: inset;
@@ -233,7 +267,6 @@ button {
 }
 
 button {
-
     color: -internal-light-dark-color(buttontext, rgb(170, 170, 170));
     letter-spacing: normal;
     word-spacing: normal;
@@ -247,7 +280,7 @@ button {
     background-color: -internal-light-dark-color(rgb(239, 239, 239), rgb(74, 74, 74));
     box-sizing: border-box;
     margin: 0em;
-    font: 400 13.3333px Kurale;
+    font: 400 13.3333px Roboto;
     padding: 1px 6px;
     border-width: 2px;
     border-style: outset;
@@ -255,11 +288,9 @@ button {
     border-image: initial;
 }
 
-.content{
-    margin-left: auto;
-    margin-right: auto;
-
-}
+/*.content{
+    margin: auto 0;
+}*/
 
 footer, header, section {
     display: block;
@@ -272,6 +303,7 @@ footer, header, section {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    transition: all 1s ease;
 }
 
 .card-4, .hover-shadow:hover {
@@ -288,7 +320,7 @@ footer, header, section {
     background-color: #ffeb3b;
 }
 
-.container:after, .container:before, .container_about, .container_about:before, 
+.container_about, .container_about:before, 
 .panel:after, .panel:before, .row:after, .row:before, .row-padding:after, .row-padding:before,
 .cell-row:before, .cell-row:after, .clear:after, .clear:before, .bar:before, .bar:after {
     content: "";
@@ -302,14 +334,25 @@ footer, header, section {
 
 .col.s3{width:24.99999%}
 
+@media (max-width:601px)
+{
+    .col.m6, .half {width:97%;}
+    .container {padding: 0;}
+    .m6 img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 @media (min-width:601px)
-{.col.m6,.half{width:49.99999%}}
+{.col.m6, .half {width:49.99999%}}
 
 @media (min-width:993px)
-{.col.l3{width:24.99999%}}
+{.col.l3 {width:24.99999%}}
 
 @media (max-width:1205px)
-{.auto{max-width:95%}}
+{ .auto {max-width:95%}}
 
 @media (min-width:601px)
-{.col.m4,.third{width:33.33333%}}
+{.col.m4, .third {width:33.33333%}}
